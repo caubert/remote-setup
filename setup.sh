@@ -8,7 +8,7 @@ copyFile() {
 	test -e $file
 	if [ $? -eq 0 ] ; then
 		# confirm parent directory exists
-    	parent_dir=$(dirname $file)
+		parent_dir=$(dirname $file)
 		ssh $server "mkdir -p $parent_dir"
 
 		# copy local file or directory to remote
